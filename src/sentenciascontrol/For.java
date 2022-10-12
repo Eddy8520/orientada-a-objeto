@@ -215,12 +215,10 @@ ForC por= new ForC();
     }// </editor-fold>//GEN-END:initComponents
 
     private void bCalcular1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalcular1ActionPerformed
-        try{
-
-        }
-        catch(NumberFormatException ex){
-
-        }
+       //calcular promedio 
+    double N=Double.parseDouble(tfNum5.getText());
+    double resp=por.promedio(N);
+    JOptionPane.showMessageDialog(this,resp);
     }//GEN-LAST:event_bCalcular1ActionPerformed
 
     private void bCalcular2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalcular2ActionPerformed
@@ -241,7 +239,8 @@ if(resp2){
 else{
     JOptionPane.showMessageDialog(this, "noes primo");
     }//GEN-LAST:event_bVerificar3ActionPerformed
-
+    }
+    
     private void bCalcular3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalcular3ActionPerformed
 ///calcule la sumatoria tfNum1        // TODO add your handling code here:
 double n1=Double.parseDouble(tfNum1.getText());
@@ -250,11 +249,24 @@ double resp1=por.sumatoria(n1);
     }//GEN-LAST:event_bCalcular3ActionPerformed
 
     private void bImprimir6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bImprimir6ActionPerformed
-        // TODO add your handling code here:
+//fibonacci        // TODO add your handling code here:
+    double[] fibona=new double[6];
+    fibona=por.fibo();
+                   
+     JOptionPane.showMessageDialog(this,fibona[0]);
+       JOptionPane.showMessageDialog(this,fibona[1]);
+       JOptionPane.showMessageDialog(this,fibona[2]);
+       JOptionPane.showMessageDialog(this,fibona[3]);
+       JOptionPane.showMessageDialog(this,fibona[4]);
+       JOptionPane.showMessageDialog(this,fibona[5]);
+     
     }//GEN-LAST:event_bImprimir6ActionPerformed
 
     private void bCalcular5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCalcular5ActionPerformed
         // TODO add your handling code here:
+        ////numeros pares de 1 100
+        double suma=por.pares();
+        JOptionPane.showMessageDialog(this, suma);
     }//GEN-LAST:event_bCalcular5ActionPerformed
 
 

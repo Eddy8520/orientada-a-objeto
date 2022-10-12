@@ -4,6 +4,8 @@
  */
 package Modelos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author alexa
@@ -47,5 +49,50 @@ public class ForC {
   }
     return true;
        }
+       
+       public double promedio(double n){
+          double nota ;
+          nota=0;
+          double prom;
+          prom=0;
+          
+           for(int i=0;i<n;i++){
+               
+              nota=Double.parseDouble(JOptionPane.showInputDialog("introduzca un dato"));
+               prom=prom+nota;
+              
+               }
+           prom=prom/n;
+           return prom;
+           
+       }
 
-}
+       public double pares(){
+           double suma;
+           suma=0;
+           for(int a=0;a<100;a=a+2){
+               suma=suma+a;
+               
+           
+           }
+           return suma;
+       }
+       
+       
+       public double[] fibo(){
+           
+           double[] fi=new double[6];
+           double suma;
+           suma=0;
+           for (int i=0;i<6;i++){
+               fi[i]=suma;
+               suma=(suma+1)+suma;
+           }
+         
+           return fi;
+       }
+       
+           
+       }
+       
+       
