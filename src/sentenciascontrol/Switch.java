@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package sentenciascontrol;
+import Modelos.switching;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Armando J. López L.
  */
 public class Switch extends javax.swing.JInternalFrame {
+    switching sele=new switching();
 
     /**
      * Creates new form Switch
@@ -69,10 +72,20 @@ public class Switch extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(taEjer1);
 
         bMostrar1.setText("Mostar");
+        bMostrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMostrar1ActionPerformed(evt);
+            }
+        });
 
         lEjer2.setText("2. Según el número del mes, determine la época del año");
 
         bMostrar2.setText("Mostar");
+        bMostrar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMostrar2ActionPerformed(evt);
+            }
+        });
 
         lEjer3.setText("3. Según el número del mes, determine el número de días");
 
@@ -193,6 +206,27 @@ public class Switch extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bMostrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMostrar1ActionPerformed
+        // TODO add your handling code here:\
+        //tfMes1
+        
+        String mes=this.tfMes1.getText();
+        String resp1=sele.Meses(mes);
+        JOptionPane.showMessageDialog(this, resp1);
+        
+        
+        
+        
+    }//GEN-LAST:event_bMostrar1ActionPerformed
+
+    private void bMostrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMostrar2ActionPerformed
+//tfMes2        // TODO add your handling code here:
+    int n=this.tfMes2.getText();
+    String temporada=sele.temporada(n);
+    
+    
+    }//GEN-LAST:event_bMostrar2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
